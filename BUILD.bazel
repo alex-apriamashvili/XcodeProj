@@ -1,0 +1,16 @@
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+
+swift_library(
+    name = "xcodeproj",
+    srcs = glob([
+        "Sources/XcodeProj/*.swift",
+        "Sources/XcodeProj/*/*.swift",
+        "Sources/XcodeProj/*/*/*.swift",
+    ]),
+    module_name = "XcodeProj",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@aexml//:aexml",
+        "@path_kit//:path_kit",
+    ]
+)

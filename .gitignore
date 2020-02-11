@@ -161,6 +161,11 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
+# Bazel
+#
+# Ignore all the build artifacts produced by 'bazel'
+bazel-*
+
 ### SwiftPM ###
 Packages
 .build
